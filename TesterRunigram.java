@@ -24,6 +24,7 @@ public class TesterRunigram {
             // Testing Runigram.flippedHorizontally
             System.out.println("Testing Runigram.flippedHorizontally...");
             if (testFlipHorizontally()) {
+                System.out.println("are you even getting this");
                 System.out.println("PASSED");
             } else {
                 System.out.println("FAILED");
