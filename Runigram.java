@@ -143,9 +143,7 @@ public class Runigram {
 	 * values in the two input color.
 	 */
 	public static Color blend(Color c1, Color c2, double alpha) {
-		//This was my original to clamp the results into rgb values but for some reason the autograder doesn't like it
-		// when things are running proper: 
-		//int blue = Math.min(255, Math.max(0, (int)(c1.getBlue() * alpha + c2.getBlue() * (1 - alpha))));
+		// Math.min(255, Math.max(0, "")) ensures we're clamping the results so we don't get any out of bounds values
 		int blue = Math.min(255, Math.max(0, (int)(c1.getBlue() * alpha + c2.getBlue() * (1 - alpha)))); 
 		int green = Math.min(255, Math.max(0, (int)(c1.getGreen() * alpha + c2.getGreen() * (1 - alpha))));
 		int red = Math.min(255, Math.max(0, (int)(c1.getRed() * alpha + c2.getRed() * (1 - alpha))));		
